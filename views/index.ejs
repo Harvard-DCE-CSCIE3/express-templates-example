@@ -1,0 +1,15 @@
+<%- include('header', { title: title }) %>
+  <div class="page-content">  
+    <h1><%= title %></h1>
+    <p>Photos List (click a title to see the photo and description)</p>
+    <ul>
+      <% photos.forEach(photo => { %>
+        <li><a href="/photos/<%= photo.id %>"><%= photo.title %></a></li>
+      <% }) %>
+    </ul>
+    <div>
+      <%- include('addPhoto') %>
+    </div>
+  </div>
+</body>
+</html>
